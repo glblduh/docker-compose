@@ -1,0 +1,13 @@
+services:
+  anki_sync_server:
+    image:  jeankhawand/anki-sync-server:24.04.1
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - SYNC_USER1=${USER1}
+    volumes:
+      - anki_data:/home/anki
+
+volumes:
+  anki_data:
