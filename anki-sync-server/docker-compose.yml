@@ -1,6 +1,7 @@
 services:
-  anki_sync_server:
-    image:  jeankhawand/anki-sync-server:24.04.1
+  app:
+    image: jeankhawand/anki-sync-server:24.04.1
+    container_name: anki-sync-server
     restart: unless-stopped
     ports:
       - "8080:8080"
