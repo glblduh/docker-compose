@@ -1,0 +1,21 @@
+services:
+  app:
+    image: itzg/minecraft-server
+    container_name: fabric
+    restart: unless-stopped
+    ports:
+      - "25565:25565"
+    environment:
+      - EULA=TRUE
+      - TYPE=FABRIC
+      - VERSION=1.21
+      - ONLINE_MODE=FALSE
+      - ALLOW_FLIGHT=TRUE
+      - SERVER_NAME=Fabric Minecraft Server
+      - FETCH_RESPONSE_TIMEOUT=PT20S
+      - MODRINTH_PROJECTS=fabric-api:oIVA3FbL
+        geyser:BYWSwaeW
+        lithium:my7uONjU
+        sodium:dNHeFokL
+    volumes:
+      - ${DATAPATH}:/data
