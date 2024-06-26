@@ -13,9 +13,6 @@ services:
       - ALLOW_FLIGHT=TRUE
       - SERVER_NAME=Fabric Minecraft Server
       - FETCH_RESPONSE_TIMEOUT=PT20S
-      - MODRINTH_PROJECTS=fabric-api:oIVA3FbL
-        geyser:BYWSwaeW
-        lithium:my7uONjU
-        sodium:dNHeFokL
+      - MODRINTH_PROJECTS=fabric-api:oIVA3FbL,geyser:BYWSwaeW,lithium:my7uONjU,sodium:dNHeFokL
     volumes:
       - ${DATAPATH}:/data
